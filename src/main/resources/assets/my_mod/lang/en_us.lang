@@ -1,0 +1,3 @@
+tile.my_mod.example_block.name=Example Block
+item.my_mod.example_item.name=example item
+itemGroup.example_tab=example items

@@ -1,0 +1,18 @@
+[
+{
+  "modid": "my_mod",
+  "name": "My First Mod",
+  "description": "Just a demo mod",
+  "version": "${version}",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ExampleDude"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": [],
+  "useDependencyInformation": true,
+  "requiredMods": []
+}
+]

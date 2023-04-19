@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "normal": {
+      "model": "my_mod:example_block_model"
+    }
+  }
+}

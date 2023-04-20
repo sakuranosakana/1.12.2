@@ -17,6 +17,10 @@ public final class ItemInitializer {
     // 和正常的事件一样，你不需要手动调用此方法！Forge 会自动调用它的。
     @SubscribeEvent
     public static void registerItem(RegistryEvent.Register<Item> event) {
+        event.getRegistry().register(new Item()
+                .setCreativeTab(EXAMPLE_CREATIVE_TAB)
+                .setTranslationKey("my_mod.aaa")
+                .setRegistryName("my_mod:aaa"));
         event.getRegistry().register(
                 firstItem = new Item()
                         .setCreativeTab(EXAMPLE_CREATIVE_TAB)

@@ -1,3 +1,4 @@
 item.my_mod.example_item.name=测试物品
 tile.my_mod.example_block.name=测试方块
 itemGroup.example_tab=测试物品
+tile.my_mod.lava_furnace.name=熔岩炉

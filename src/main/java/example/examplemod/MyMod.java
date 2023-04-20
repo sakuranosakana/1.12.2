@@ -2,6 +2,7 @@ package example.examplemod;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 // Mod主类的标记。其中只有modid是必填项。
 //
@@ -18,33 +19,20 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 //
 // useMetadata = true 让 Forge 以 mcmod.info 里的信息为准。它的格式在“Mod 的元数据”一节
 // 会有详细说明。
-@Mod(modid = "my_mod", name = "My First Mod", version = "0.0.0", useMetadata = true)
+@Mod(modid = MyMod.MODID, name = MyMod.NAME, version = "@VERSION@")
 public enum MyMod {
     INSTANCE;
 
-    // Mod 主类实例的“工厂”。
-    // 别的 Mod 开发教程肯定使用的是@Mod.Instance
-    // 这里之所以这么写，是因为主类是 enum，换言之父类是 java.lang.Enum
-    // 因此，FML 直接 Class.newInstance() 的话一定会报错，java.lang.Enum 没有零参构造器
     @Mod.InstanceFactory
     public static MyMod getInstance() {
         return INSTANCE;
     }
 
-    // 一个入口方法。
-    // Mod的加载大致分为 6 个阶段，每个阶段均有一个事件代表，
-    // 而 @Mod.EventHandler 注解则标记该方法将订阅此事件。
-    // Mod 加载时的六个阶段对应的事件，以时间顺序排列：
-    //    FMLConstructionEvent
-    //    FMLPreInitializationEvent
-    //    FMLInitializationEvent
-    //    FMLInterModComms.IMCEvent
-    //    FMLPostInitializationEvent
-    //    FMLLoadCompleteEvent
-    // 其中，PreInit.、Init.、IMCEvent 和 PostInit. 是最常用的四个事件，
-    // 剩下两个事件只有在相当少见的情况下才会用到，大可暂时无视。
+    public static final String MODID = "examplemod", NAME = "Example Mod";
     @Mod.EventHandler
     public void preLoad(FMLPreInitializationEvent event) {
         System.out.println("Hello, Forge");
     }
 }
+
+
